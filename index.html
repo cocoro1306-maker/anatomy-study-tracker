@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anatomy Tracker｜大體解剖學複習</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-icon">✳</span>
+        <span>Anatomy.</span>
+      </div>
+      <span class="exam-tag">MIDTERM II · 11/09</span>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">GROSS ANATOMY · STUDY TRACKER</p>
+      <h1>按照自己的節奏，<br>穩定完成每一章。</h1>
+      <p>
+        大體解剖學第二次段考
+        <span class="hero-dot">·</span>
+        2026/11/09
+      </p>
+    </section>
+
+    <section class="stats">
+      <div class="card stat-card">
+        <p>距離考試</p>
+        <h2 id="countdown">-- 天</h2>
+      </div>
+
+      <div class="card stat-card">
+        <p>已完成章節</p>
+        <h2 id="completed">-- / --</h2>
+      </div>
+
+      <div class="card stat-card">
+        <p>每日學習目標</p>
+        <h2>3.5 小時</h2>
+      </div>
+    </section>
+
+    <section class="card progress-card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">OVERALL PROGRESS</p>
+          <h2>整體複習進度</h2>
+        </div>
+        <strong id="progress-percent">0%</strong>
+      </div>
+
+      <div class="progress-track">
+        <div id="overall-progress"></div>
+      </div>
+
+      <p id="progress-text">載入中...</p>
+    </section>
+
+    <section class="card today-card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">NEXT UP</p>
+          <h2>接下來要讀什麼？</h2>
+        </div>
+        <span class="soft-tag">彈性排程</span>
+      </div>
+
+      <p class="section-description">
+        從未完成的階段接續，每天安排約 3.5 小時。
+        已完成的項目不會重新排入。
+      </p>
+
+      <div class="today-summary">
+        <div>
+          <p>今日建議學習量</p>
+          <h3 id="today-total">計算中...</h3>
+        </div>
+        <div>
+          <p>剩餘章節工作量</p>
+          <h3 id="remaining-total">計算中...</h3>
+        </div>
+      </div>
+
+      <div id="today-task-list" class="today-task-list"></div>
+
+      <div class="notice" id="schedule-notice"></div>
+    </section>
+
+    <section class="card chapter-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CHAPTER LIBRARY</p>
+          <h2>章節複習進度</h2>
+        </div>
+        <span class="section-note">四階段全完成才算完成一章</span>
+      </div>
+
+      <div class="chapter-layout">
+        <div class="chapter-sidebar">
+          <div id="chapter-list"></div>
+        </div>
+
+        <div class="chapter-detail">
+          <div class="chapter-heading">
+            <div>
+              <p class="eyebrow" id="chapter-category">CHAPTER</p>
+              <h3 id="chapter-title">載入中...</h3>
+              <p id="chapter-description"></p>
+            </div>
+            <span class="status-badge" id="chapter-status">
+              未開始
+            </span>
+          </div>
+
+          <div class="duration-summary">
+            <p>本章預估總耗時</p>
+            <h2 id="chapter-total-duration">--</h2>
+            <span id="chapter-remaining-duration"></span>
+          </div>
+
+          <div id="chapter-video-info"></div>
+
+          <div class="duration-section">
+            <h4>各階段預估耗時</h4>
+            <div id="chapter-duration-list"></div>
+          </div>
+
+          <div class="stage-heading">
+            <h4>四階段完成進度</h4>
+            <span id="stage-count">0 / 4</span>
+          </div>
+
+          <div class="stage-progress-track">
+            <div id="stage-progress"></div>
+          </div>
+
+          <div id="chapter-tasks"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card exam-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">FINAL REVIEW</p>
+          <h2>考前兩天模擬考</h2>
+        </div>
+        <span class="soft-tag">保留日期</span>
+      </div>
+
+      <div class="exam-grid">
+        <div class="exam-item">
+          <p>11/07（六）</p>
+          <h3>歷屆考古題模擬考 I</h3>
+          <span>限時作答、錯題訂正</span>
+          <label class="exam-check">
+            <input type="checkbox" id="mock-1">
+            已完成模擬考
+          </label>
+        </div>
+
+        <div class="exam-item">
+          <p>11/08（日）</p>
+          <h3>歷屆考古題模擬考 II</h3>
+          <span>高頻考點、神經血管統整</span>
+          <label class="exam-check">
+            <input type="checkbox" id="mock-2">
+            已完成模擬考
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Anatomy Tracker · One stage at a time.
+    </footer>
+
+  </main>
+</body>
+</html>
