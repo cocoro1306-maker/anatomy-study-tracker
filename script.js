@@ -71,7 +71,7 @@ for(const c of chapters){
  if(!Array.isArray(partial[c.id]))partial[c.id]=[0,0,0,0];
  durations(c).forEach((d,i)=>{progress[c.id][i]=progress[c.id][i]===true;partial[c.id][i]=progress[c.id][i]?d:Math.max(0,Math.min(d,Number(partial[c.id][i])||0))});
 }
-function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(progress));localStorage.setItem(PARTIAL_KEY,JSON.stringify(partial));localStorage.setItem(MOCK_KEY,JSON.stringify(mock));localStorage.setItem(DAILY_LOG_KEY,JSON.stringify(daily));localStorage.setItem(MIGRATION_KEY,JSON.stringify(migration));localStorage.setItem(PRIORITY_KEY,priority)}
+function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(progress));localStorage.setItem(PARTIAL_KEY,JSON.stringify(partial));localStorage.setItem(MOCK_KEY,JSON.stringify(mock));localStorage.setItem(DAILY_LOG_KEY,JSON.stringify(daily));localStorage.setItem(MIGRATION_KEY,JSON.stringify(migration));localStorage.setItem(PRIORITY_KEY,priority);window.dispatchEvent(new Event("anatomy-local-change"))}
 const complete=c=>progress[c.id].every(Boolean),completed=c=>progress[c.id].filter(Boolean).length;
 const remainingStage=(c,i)=>progress[c.id][i]?0:Math.max(0,durations(c)[i]-partial[c.id][i]);
 const remaining=c=>stages.reduce((s,_,i)=>s+remainingStage(c,i),0),done=c=>total(c)-remaining(c);
